@@ -24,6 +24,7 @@
 		EB027A17118D27D90023C30C /* eval.c in Sources */ = {isa = PBXBuildFile; fileRef = EB027A16118D27D90023C30C /* eval.c */; };
 		EB027A28118D28A50023C30C /* expand.c in Sources */ = {isa = PBXBuildFile; fileRef = EB027A27118D28A50023C30C /* expand.c */; };
 		EB027A2E118D290A0023C30C /* library.c in Sources */ = {isa = PBXBuildFile; fileRef = EB027A2D118D290A0023C30C /* library.c */; };
+		EB027A7B118D49C60023C30C /* srfi-4.c in Sources */ = {isa = PBXBuildFile; fileRef = EB027A7A118D49C60023C30C /* srfi-4.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		EB027A16118D27D90023C30C /* eval.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = eval.c; path = "/Users/spedrosa/Downloads/chicken-4.4.0/eval.c"; sourceTree = "<absolute>"; };
 		EB027A27118D28A50023C30C /* expand.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = expand.c; path = "/Users/spedrosa/Downloads/chicken-4.4.0/expand.c"; sourceTree = "<absolute>"; };
 		EB027A2D118D290A0023C30C /* library.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = library.c; path = "/Users/spedrosa/Downloads/chicken-4.4.0/library.c"; sourceTree = "<absolute>"; };
+		EB027A7A118D49C60023C30C /* srfi-4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "srfi-4.c"; path = "/Users/spedrosa/Downloads/chicken-4.4.0/srfi-4.c"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 		EB027A0B118D26760023C30C /* Chicken */ = {
 			isa = PBXGroup;
 			children = (
+				EB027A7A118D49C60023C30C /* srfi-4.c */,
 				EB027A27118D28A50023C30C /* expand.c */,
 				EB027A0C118D26B40023C30C /* runtime.c */,
 				EB027A2D118D290A0023C30C /* library.c */,
@@ -226,6 +229,7 @@
 				EB027A17118D27D90023C30C /* eval.c in Sources */,
 				EB027A28118D28A50023C30C /* expand.c in Sources */,
 				EB027A2E118D290A0023C30C /* library.c in Sources */,
+				EB027A7B118D49C60023C30C /* srfi-4.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

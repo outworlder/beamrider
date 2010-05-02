@@ -37,7 +37,7 @@ extern int test_chicken(int);
         eaglLayer.drawableProperties = [NSDictionary dictionaryWithObjectsAndKeys:
                                         [NSNumber numberWithBool:FALSE], kEAGLDrawablePropertyRetainedBacking, kEAGLColorFormatRGBA8, kEAGLDrawablePropertyColorFormat, nil];
 		
-		renderer = [[ES2Renderer alloc] init];
+		/*renderer = [[ES2Renderer alloc] init];*/
 		
 		if (!renderer)
 		{

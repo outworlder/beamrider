@@ -290,7 +290,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>7</integer>
+									<integer>8</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -314,7 +314,7 @@
 							<real>309</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>-5 54 1280 719 0 0 1280 778 </string>
+						<string>-4 54 1280 719 0 0 1280 778 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -332,7 +332,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>EAGLView.m</string>
+								<string>ES1Renderer.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -340,21 +340,22 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>EAGLView.m</string>
+										<string>ES1Renderer.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>EB027A65118D2D880023C30C</string>
+										<string>EB027B3C118D580F0023C30C</string>
 										<key>history</key>
 										<array>
-											<string>EB0279DE118B96A70023C30C</string>
 											<string>EB027A22118D28000023C30C</string>
-											<string>EB027A35118D29BB0023C30C</string>
 											<string>EB027A36118D29BB0023C30C</string>
-											<string>EB027A49118D2BBB0023C30C</string>
-											<string>EB027A5C118D2CE20023C30C</string>
-											<string>EB027A5D118D2CE20023C30C</string>
-											<string>EB027A5E118D2CE20023C30C</string>
+											<string>EB027A73118D46A70023C30C</string>
+											<string>EB027A96118D4AF30023C30C</string>
+											<string>EB027AA0118D4B1F0023C30C</string>
+											<string>EB027ADF118D51EC0023C30C</string>
+											<string>EB027B0E118D545C0023C30C</string>
+											<string>EB027B2A118D570F0023C30C</string>
+											<string>EB027B2B118D570F0023C30C</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -368,7 +369,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {949, 476}}</string>
 								<key>RubberWindowFrame</key>
-								<string>-5 54 1280 719 0 0 1280 778 </string>
+								<string>-4 54 1280 719 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -388,7 +389,7 @@
 								<key>Frame</key>
 								<string>{{0, 481}, {949, 197}}</string>
 								<key>RubberWindowFrame</key>
-								<string>-5 54 1280 719 0 0 1280 778 </string>
+								<string>-4 54 1280 719 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -554,14 +555,14 @@
 	<array>
 		<string>EB027A4C118D2BBB0023C30C</string>
 		<string>EB027A44118D29EF0023C30C</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>EB027A41118D29EF0023C30C</string>
 		<string>EB7F3F50118B58DE000FA6B9</string>
+		<string>EB027A41118D29EF0023C30C</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/spedrosa/Documents/Projects/beamrider/beamrider/beamrider.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>-5 54 1280 719 0 0 1280 778 </string>
+	<string>-4 54 1280 719 0 0 1280 778 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -777,7 +778,7 @@
 			<key>WindowToolGUID</key>
 			<string>1CD10A99069EF8BA00B06720</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>
