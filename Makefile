@@ -6,13 +6,14 @@ FLAGS=
 
 .PHONY: all clean
 
-all: modules $(OBJECTS) 
+all: modules
 
 modules:
-	$(CSC) -s beamrider.scm -o beamrider  $(FLAGS)
+	make Scheme/Makefile
+	xcodebuild -configuration Debug -sdk iphonesimulator3.1.2
 
-%::%.scm
-	$(CSC) $@.scm -o ../cgi-bin/$@ $(FLAGS)
+# %::%.scm
+# 	$(CSC) $@.scm -o ../cgi-bin/$@ $(FLAGS)
 
 clean:
 	rm $(OBJECTS)

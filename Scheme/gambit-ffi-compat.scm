@@ -7,3 +7,7 @@
 (define-syntax c-define-type
   (syntax-rules ()
     ([_ name type] (define-foreign-type name type))))
+
+(define-syntax c-declare
+  (syntax-rules ()
+    ([_ string] (foreign-declare string))))

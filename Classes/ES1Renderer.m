@@ -11,6 +11,7 @@
 @implementation ES1Renderer
 
 extern void render_scene();
+extern void scene_setup(int, int);
 
 // Create an ES 1.1 context
 - (id) init
@@ -31,45 +32,23 @@ extern void render_scene();
 		glBindFramebufferOES(GL_FRAMEBUFFER_OES, defaultFramebuffer);
 		glBindRenderbufferOES(GL_RENDERBUFFER_OES, colorRenderbuffer);
 		glFramebufferRenderbufferOES(GL_FRAMEBUFFER_OES, GL_COLOR_ATTACHMENT0_OES, GL_RENDERBUFFER_OES, colorRenderbuffer);
+		
+		scene_setup(480, 320);
 	}
 	
 	return self;
 }
 
 - (void) render
-{
-    // Replace the implementation of this method to do your own custom drawing
-    
-    static const GLfloat squareVertices[] = {
-        -0.5f,  -0.33f,
-         0.5f,  -0.33f,
-        -0.5f,   0.33f,
-         0.5f,   0.33f,
-    };
-	
-    static const GLubyte squareColors[] = {
-        255, 255,   0, 255,
-        0,   255, 255, 255,
-        0,     0,   0,   0,
-        255,   0, 255, 255,
-    };
-    
-	static float transY = 0.0f;
-	
+{	
 	// This application only creates a single context which is already set current at this point.
 	// This call is redundant, but needed if dealing with multiple contexts.
-    [EAGLContext setCurrentContext:context];
+    //[EAGLContext setCurrentContext:context];
     
 	// This application only creates a single default framebuffer which is already bound at this point.
 	// This call is redundant, but needed if dealing with multiple framebuffers.
-    glBindFramebufferOES(GL_FRAMEBUFFER_OES, defaultFramebuffer);
-    glViewport(0, 0, backingWidth, backingHeight);
-    
-    glMatrixMode(GL_PROJECTION);
-    glLoadIdentity();
-    glMatrixMode(GL_MODELVIEW);
-	glLoadIdentity();
-
+    //glBindFramebufferOES(GL_FRAMEBUFFER_OES, defaultFramebuffer);
+	
 	render_scene();
 	
 	// This application only creates a single color renderbuffer which is already bound at this point.
