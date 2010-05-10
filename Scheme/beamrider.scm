@@ -44,7 +44,7 @@
   (list (point-x point) (point-y point) (point-z point)))
 
 (define grid
-  (make-grid 10 8))
+  (make-grid 80 100))
 
 (define grid-length
   (- (f32vector-length grid) 1))
@@ -64,20 +64,23 @@
     (let loop ([i divisions] [acum '()])
       (if (< i 0)
           (list->f32vector acum)
-          (loop
-           (- i 1)
-           (append
-            acum
-            (line->list
-             (make-line (- side/2) (- (* i spacing) side/2) 0 side/2 (- (* i spacing) side/2) 0)) ; X
-            (line->list
-             (make-line (- (* i spacing) side/2) (- side/2) 0 (- (* i spacing) side/2) side/2 0)))))))) ;Y
-
-(define (flatten list)
-  (cond ((null? list) '())
-	((list? (car list)) (append (flatten (car list)) (flatten (cdr list))))
-	(else
-	 (cons (car list) (flatten (cdr list))))))
+          (loop (- i 1)
+                (append
+                 acum
+                 (line->list
+                  (make-line (- side/2)               ;x1
+                             (+ (* i spacing) (- side/2)) ;y1
+                             0                        ;z1
+                             side/2                   ;x2
+                             (+ (* i spacing) (- side/2)) ;y2
+                             0))                      ;z2
+                 (line->list
+                  (make-line (+ (* i spacing) (- side/2)) ;x1
+                             (- side/2)               ;y1
+                             0                        ;z1
+                             (+ (* i spacing) (- side/2)) ;x2
+                             side/2                   ;y2
+                             0))))))))                ;z2
 
 (define-external (scene_setup (int width) (int height)) void
   (print "Width: " width)
@@ -89,7 +92,12 @@
   (glLoadIdentity)
   (make-perspective field-of-view (/ width height) zNear zFar)  
   (glMatrixMode GL_MODELVIEW)
-  (glLoadIdentity))
+  (glLoadIdentity)
+  (glEnable GL_BLEND)
+  (glBlendFunc GL_SRC_ALPHA GL_ONE_MINUS_SRC_ALPHA)
+  (glHint GL_LINE_SMOOTH_HINT GL_NICEST)
+  (glLineWidth 1.5)
+  (glEnable GL_LINE_SMOOTH))
 
 (define (render-scene)
   (glClear (bitwise-ior GL_COLOR_BUFFER_BIT GL_DEPTH_BUFFER_BIT))
@@ -99,8 +107,8 @@
    (glVertexPointer 3 GL_FLOAT 0 grid)
    (with-transform
     (glColor4f 0.0 0.0 1.0 1.0)
-    (glTranslatef 0.0 0.0 -15.0)
-    ;;(glRotatef (- 45) 1.0 0.0 0.0)
+    (glTranslatef 0.0 -1.5 (- 9.5))
+    (glRotatef -85.0 1.0 0.0 0.0)
     (glDrawArrays GL_LINES 0 grid-length))))
 
 (return-to-host)

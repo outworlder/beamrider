@@ -282,6 +282,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
+									<integer>11</integer>
+									<integer>8</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -335,7 +337,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>EB99D4F11191249800D5C51A</string>
+										<string>EB99D58A1197AFC500D5C51A</string>
 										<key>history</key>
 										<array>
 											<string>EB027A22118D28000023C30C</string>
@@ -344,11 +346,11 @@
 											<string>EB99D3E611910F0200D5C51A</string>
 											<string>EB99D3E811910F0200D5C51A</string>
 											<string>EB99D3E911910F0200D5C51A</string>
-											<string>EB99D4171191124100D5C51A</string>
 											<string>EB99D4281191133C00D5C51A</string>
-											<string>EB99D48A11911CA300D5C51A</string>
 											<string>EB99D4C211911FAC00D5C51A</string>
-											<string>EB99D4C311911FAC00D5C51A</string>
+											<string>EB99D5191197A07300D5C51A</string>
+											<string>EB99D51F1197A0B700D5C51A</string>
+											<string>EB99D5201197A0B700D5C51A</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -546,13 +548,13 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>EB99D4F21191249800D5C51A</string>
+		<string>EB99D58B1197AFC500D5C51A</string>
 		<string>EB99D40C119110FB00D5C51A</string>
 		<string>EB99D40D119110FB00D5C51A</string>
 		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>/Users/spedrosa/Documents/Projects/beamrider/beamrider/beamrider.xcodeproj</string>
 		<string>EB7F3F50118B58DE000FA6B9</string>
+		<string>/Users/spedrosa/Documents/Projects/beamrider/beamrider/beamrider.xcodeproj</string>
 		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
@@ -896,7 +898,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {650, 209}}</string>
 								<key>RubberWindowFrame</key>
-								<string>14 214 650 250 0 0 1280 778 </string>
+								<string>24 97 650 250 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXDebugCLIModule</string>
@@ -925,7 +927,7 @@
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.consoleV3</string>
 			<key>WindowString</key>
-			<string>14 214 650 250 0 0 1280 778 </string>
+			<string>24 97 650 250 0 0 1280 778 </string>
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
