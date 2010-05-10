@@ -33,7 +33,7 @@ extern void scene_setup(int, int);
 		glBindRenderbufferOES(GL_RENDERBUFFER_OES, colorRenderbuffer);
 		glFramebufferRenderbufferOES(GL_FRAMEBUFFER_OES, GL_COLOR_ATTACHMENT0_OES, GL_RENDERBUFFER_OES, colorRenderbuffer);
 		
-		scene_setup(480, 320);
+		scene_setup(320, 480);
 	}
 	
 	return self;
