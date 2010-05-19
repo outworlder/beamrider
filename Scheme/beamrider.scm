@@ -1,30 +1,12 @@
 (include "gambit-ffi-compat")
 (include "gl")
+(include "config")
+(include "externals")
+(include "remote-repl")
 
 (use srfi-4)
 
-(define-external (test_chicken (int interval)) int
-  5)
-
-(define-external (render_scene) void
-  (render-scene))
-
-(define clear-color
-  '(0.0 0.0 0.0 1))
-
-(define field-of-view
-  45.0)
-
-(define zNear
-  0.1)
-
-(define zFar
-  100)
-
 (define-record point x y z)
-
-(define PI
-  3.141926535)
 
 (define-syntax with-transform
   (syntax-rules ()
@@ -82,7 +64,7 @@
                              side/2                   ;y2
                              0))))))))                ;z2
 
-(define-external (scene_setup (int width) (int height)) void
+(define (setup-scene width height)
   (print "Width: " width)
   (print "Height: " height)
   (apply glClearColor clear-color)
@@ -99,6 +81,9 @@
   (glLineWidth 1.5)
   (glEnable GL_LINE_SMOOTH))
 
+(define (update-world deltat)
+  #f)
+
 (define (render-scene)
   (glClear (bitwise-ior GL_COLOR_BUFFER_BIT GL_DEPTH_BUFFER_BIT))
   (with-transform
@@ -110,5 +95,7 @@
     (glTranslatef 0.0 -1.5 (- 9.5))
     (glRotatef -85.0 1.0 0.0 0.0)
     (glDrawArrays GL_LINES 0 grid-length))))
+
+(start-server)
 
 (return-to-host)

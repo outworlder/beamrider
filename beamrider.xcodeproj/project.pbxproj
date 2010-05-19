@@ -25,6 +25,12 @@
 		EB027A28118D28A50023C30C /* expand.c in Sources */ = {isa = PBXBuildFile; fileRef = EB027A27118D28A50023C30C /* expand.c */; };
 		EB027A2E118D290A0023C30C /* library.c in Sources */ = {isa = PBXBuildFile; fileRef = EB027A2D118D290A0023C30C /* library.c */; };
 		EB027A7B118D49C60023C30C /* srfi-4.c in Sources */ = {isa = PBXBuildFile; fileRef = EB027A7A118D49C60023C30C /* srfi-4.c */; };
+		EBA8D03611A363D9001A73D2 /* tcp.c in Sources */ = {isa = PBXBuildFile; fileRef = EBA8D03511A363D9001A73D2 /* tcp.c */; };
+		EBA8D03A11A363F7001A73D2 /* extras.c in Sources */ = {isa = PBXBuildFile; fileRef = EBA8D03911A363F7001A73D2 /* extras.c */; };
+		EBA8D03C11A3640C001A73D2 /* scheduler.c in Sources */ = {isa = PBXBuildFile; fileRef = EBA8D03B11A3640C001A73D2 /* scheduler.c */; };
+		EBA8D04011A36425001A73D2 /* ports.c in Sources */ = {isa = PBXBuildFile; fileRef = EBA8D03F11A36425001A73D2 /* ports.c */; };
+		EBA8D04211A36438001A73D2 /* data-structures.c in Sources */ = {isa = PBXBuildFile; fileRef = EBA8D04111A36438001A73D2 /* data-structures.c */; };
+		EBA8D05E11A3752B001A73D2 /* srfi-18.c in Sources */ = {isa = PBXBuildFile; fileRef = EBA8D05D11A3752B001A73D2 /* srfi-18.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +62,12 @@
 		EB027A27118D28A50023C30C /* expand.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = expand.c; path = "/Users/spedrosa/Downloads/chicken-4.4.0/expand.c"; sourceTree = "<absolute>"; };
 		EB027A2D118D290A0023C30C /* library.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = library.c; path = "/Users/spedrosa/Downloads/chicken-4.4.0/library.c"; sourceTree = "<absolute>"; };
 		EB027A7A118D49C60023C30C /* srfi-4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "srfi-4.c"; path = "/Users/spedrosa/Downloads/chicken-4.4.0/srfi-4.c"; sourceTree = "<absolute>"; };
+		EBA8D03511A363D9001A73D2 /* tcp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = tcp.c; path = "../../../../Downloads/chicken-4.4.0/tcp.c"; sourceTree = SOURCE_ROOT; };
+		EBA8D03911A363F7001A73D2 /* extras.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = extras.c; path = "../../../../Downloads/chicken-4.4.0/extras.c"; sourceTree = SOURCE_ROOT; };
+		EBA8D03B11A3640C001A73D2 /* scheduler.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = scheduler.c; path = "../../../../Downloads/chicken-4.4.0/scheduler.c"; sourceTree = SOURCE_ROOT; };
+		EBA8D03F11A36425001A73D2 /* ports.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ports.c; path = "../../../../Downloads/chicken-4.4.0/ports.c"; sourceTree = SOURCE_ROOT; };
+		EBA8D04111A36438001A73D2 /* data-structures.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "data-structures.c"; path = "../../../../Downloads/chicken-4.4.0/data-structures.c"; sourceTree = SOURCE_ROOT; };
+		EBA8D05D11A3752B001A73D2 /* srfi-18.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "srfi-18.c"; path = "../../../../Downloads/chicken-4.4.0/srfi-18.c"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +166,12 @@
 		EB027A0B118D26760023C30C /* Chicken */ = {
 			isa = PBXGroup;
 			children = (
+				EBA8D05D11A3752B001A73D2 /* srfi-18.c */,
+				EBA8D04111A36438001A73D2 /* data-structures.c */,
+				EBA8D03F11A36425001A73D2 /* ports.c */,
+				EBA8D03B11A3640C001A73D2 /* scheduler.c */,
+				EBA8D03911A363F7001A73D2 /* extras.c */,
+				EBA8D03511A363D9001A73D2 /* tcp.c */,
 				EB027A7A118D49C60023C30C /* srfi-4.c */,
 				EB027A27118D28A50023C30C /* expand.c */,
 				EB027A0C118D26B40023C30C /* runtime.c */,
@@ -230,6 +248,12 @@
 				EB027A28118D28A50023C30C /* expand.c in Sources */,
 				EB027A2E118D290A0023C30C /* library.c in Sources */,
 				EB027A7B118D49C60023C30C /* srfi-4.c in Sources */,
+				EBA8D03611A363D9001A73D2 /* tcp.c in Sources */,
+				EBA8D03A11A363F7001A73D2 /* extras.c in Sources */,
+				EBA8D03C11A3640C001A73D2 /* scheduler.c in Sources */,
+				EBA8D04011A36425001A73D2 /* ports.c in Sources */,
+				EBA8D04211A36438001A73D2 /* data-structures.c in Sources */,
+				EBA8D05E11A3752B001A73D2 /* srfi-18.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

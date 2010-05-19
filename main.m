@@ -13,7 +13,7 @@ int main(int argc, char *argv[]) {
     
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 	
-	CHICKEN_run(C_toplevel);
+    CHICKEN_run(C_toplevel);
 	
     int retVal = UIApplicationMain(argc, argv, nil, nil);
     [pool release];
