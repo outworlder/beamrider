@@ -16,9 +16,6 @@
 @synthesize animating;
 @dynamic animationFrameInterval;
 
-// Extern Chicken functions
-extern int test_chicken(int);
-
 // You must implement this method
 + (Class) layerClass
 {
@@ -52,7 +49,7 @@ extern int test_chicken(int);
         
 		animating = FALSE;
 		displayLinkSupported = FALSE;
- 		animationFrameInterval = test_chicken(animationFrameInterval); 
+ 		animationFrameInterval = 1;
 		displayLink = nil;
 		animationTimer = nil;
 		
@@ -69,6 +66,9 @@ extern int test_chicken(int);
 
 - (void) drawView:(id)sender
 {
+	// Lets try to give some time to the Chicken threads.
+	CHICKEN_yield();
+	
     [renderer render];
 }
 
