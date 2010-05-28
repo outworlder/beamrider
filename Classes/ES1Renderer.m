@@ -33,7 +33,11 @@ extern void scene_setup(int, int);
 		glBindRenderbufferOES(GL_RENDERBUFFER_OES, colorRenderbuffer);
 		glFramebufferRenderbufferOES(GL_FRAMEBUFFER_OES, GL_COLOR_ATTACHMENT0_OES, GL_RENDERBUFFER_OES, colorRenderbuffer);
 		
-		scene_setup(320, 480);
+		UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];
+		
+		CGRect rect = [[UIScreen mainScreen] applicationFrame];
+		scene_setup(rect.size.width, rect.size.height);
+		set_orientation((int) orientation);
 	}
 	
 	return self;

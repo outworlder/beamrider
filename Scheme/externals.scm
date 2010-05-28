@@ -7,6 +7,8 @@
 (define-external (scene_setup (int width) (int height)) void
   (setup-scene width height))
 
+(define-external (set_orientation (int orientation)) void
+  (set-device-orientation! orientation))
 
 (define-external (start_server (int port)) void
   (start-server port))

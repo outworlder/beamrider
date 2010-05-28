@@ -8,6 +8,8 @@
 
 (define-record point x y z)
 
+(define-record grid size divisions geometry number-vertexes)
+
 (define-syntax with-transform
   (syntax-rules ()
     ([_ body ...] (begin
@@ -34,7 +36,7 @@
     (list (point-x l1) (point-y l1) (point-z l1)
           (point-x l2) (point-y l2) (point-z l2))))
 
-(define (make-grid side divisions)
+(define (make-grid-geometry side divisions)
   (let ([spacing (/ side divisions)]
         [side/2 (/ side 2)])
     (let loop ([i divisions] [acum '()])
@@ -74,27 +76,37 @@
   (glBlendFunc GL_SRC_ALPHA GL_ONE_MINUS_SRC_ALPHA)
   (glHint GL_LINE_SMOOTH_HINT GL_NICEST)
   (glLineWidth 1.5)
-  (glEnable GL_LINE_SMOOTH))
+  (glEnable GL_LINE_SMOOTH)
+  (glEnableClientState GL_VERTEX_ARRAY)
+  (glDisableClientState GL_COLOR_ARRAY))
 
 (define (update-world deltat)
   #f)
 
+(define (set-device-orientation! direction)
+  (let ([orientations (vector 'UNKNOWN 'UP 'DOWN 'LEFT 'RIGHT 'FACE-UP 'FACE-DOWN)]
+        [angles '((UNKNOWN . 0) (UP . 0) (DOWN . 180) (LEFT . -90) (RIGHT . 90) (FACE-UP . 0) (FACE-DOWN . 0))])
+    (glMatrixMode GL_MODELVIEW)
+    (print "Device orientation: " (symbol->string (car (assoc (vector-ref orientations direction) angles))))
+    (glRotatef (cdr (assoc (vector-ref orientations direction) angles)) 0.0 0.0 1.0)))
+
 (define (render-scene)
   (glClear (bitwise-ior GL_COLOR_BUFFER_BIT GL_DEPTH_BUFFER_BIT))
   (with-transform
-   (glEnableClientState GL_VERTEX_ARRAY)
-   (glDisableClientState GL_COLOR_ARRAY)
-   (glVertexPointer 3 GL_FLOAT 0 grid)
+   (glVertexPointer 3 GL_FLOAT 0 (grid-geometry grid))
    (with-transform
     (glColor4f 0.0 0.0 1.0 1.0)
     (glTranslatef 0.0 -1.5 (- 9.5))
     (glRotatef -85.0 1.0 0.0 0.0)
-    (glDrawArrays GL_LINES 0 grid-length))))
+    (glDrawArrays GL_LINES 0 (grid-number-vertexes grid)))))
+
+(define (generate-grid side divisions)
+  (let ([grid-data (make-grid-geometry side divisions)])
+    (make-grid side divisions grid-data (/ (f32vector-length grid-data) 3))))
 
 (define grid
-  (make-grid 80 100))
+  (generate-grid 80 100))
 
-(define grid-length
-  (- (f32vector-length grid) 1))
+(generate-grid 80 100)
 
 (return-to-host)

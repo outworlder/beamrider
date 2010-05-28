@@ -59,9 +59,20 @@
 		NSString *currSysVer = [[UIDevice currentDevice] systemVersion];
 		if ([currSysVer compare:reqSysVer options:NSNumericSearch] != NSOrderedAscending)
 			displayLinkSupported = TRUE;
+		
+		[[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deviceOrientationChanged:) name:UIDeviceOrientationDidChangeNotification object:nil];
+
     }
 	
     return self;
+}
+
+- (void) deviceOrientationChanged:(NSNotification *)notification
+{
+	UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];
+	
+	set_orientation((int) orientation);
 }
 
 - (void) drawView:(id)sender
@@ -145,6 +156,8 @@
 
 - (void) dealloc
 {
+	[[UIDevice currentDevice] endGeneratingDeviceOrientationNotifications];
+
     [renderer release];
 	
     [super dealloc];

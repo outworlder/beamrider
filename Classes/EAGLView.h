@@ -36,5 +36,6 @@
 - (void) startAnimation;
 - (void) stopAnimation;
 - (void) drawView:(id)sender;
+- (void) deviceOrientationChanged:(NSNotification *) notification;
 
 @end

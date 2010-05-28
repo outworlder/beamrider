@@ -282,13 +282,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>30</integer>
-									<integer>28</integer>
+									<integer>22</integer>
+									<integer>14</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 99}, {220, 600}}</string>
+							<string>{{0, 121}, {220, 600}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -337,22 +337,23 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>EB3B408911AF4864004F8BEA</string>
+										<string>EB3B410F11AF6875004F8BEA</string>
 										<key>history</key>
 										<array>
 											<string>EB027A22118D28000023C30C</string>
 											<string>EB027B0E118D545C0023C30C</string>
-											<string>EB99D3E611910F0200D5C51A</string>
-											<string>EB99D3E811910F0200D5C51A</string>
 											<string>EB99D5191197A07300D5C51A</string>
 											<string>EBA8D07811A38A87001A73D2</string>
 											<string>EB39486C11AB5ED200516C4E</string>
-											<string>EB39487C11AB795200516C4E</string>
 											<string>EB9D77CF11AC5F6000D38906</string>
 											<string>EB3B402911ADB1ED004F8BEA</string>
-											<string>EB3B405D11AF3C9D004F8BEA</string>
 											<string>EB3B408711AF4864004F8BEA</string>
-											<string>EB3B408811AF4864004F8BEA</string>
+											<string>EB3B40C511AF5B48004F8BEA</string>
+											<string>EB3B40CD11AF5C5A004F8BEA</string>
+											<string>EB3B40E311AF64D5004F8BEA</string>
+											<string>EB3B40E411AF64D5004F8BEA</string>
+											<string>EB3B410711AF683A004F8BEA</string>
+											<string>EB3B410811AF683A004F8BEA</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -550,10 +551,12 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>EB3B410411AF6822004F8BEA</string>
+		<string>EB3B40F811AF6772004F8BEA</string>
 		<string>1CD10A99069EF8BA00B06720</string>
+		<string>/Users/spedrosa/Documents/Projects/beamrider/beamrider/beamrider.xcodeproj</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>EB7F3F50118B58DE000FA6B9</string>
-		<string>/Users/spedrosa/Documents/Projects/beamrider/beamrider/beamrider.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>1 118 1280 659 0 0 1280 778 </string>
@@ -577,7 +580,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>srfi-18.c</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -896,7 +899,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {650, 209}}</string>
 								<key>RubberWindowFrame</key>
-								<string>24 155 650 250 0 0 1280 778 </string>
+								<string>27 505 650 250 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXDebugCLIModule</string>
@@ -925,7 +928,7 @@
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.consoleV3</string>
 			<key>WindowString</key>
-			<string>24 155 650 250 0 0 1280 778 </string>
+			<string>27 505 650 250 0 0 1280 778 </string>
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>

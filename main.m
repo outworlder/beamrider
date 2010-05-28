@@ -9,12 +9,13 @@
 #import <UIKit/UIKit.h>
 #include "chicken.h"
 
+extern void start_server(int);
+
 int main(int argc, char *argv[]) {
     
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 	
     CHICKEN_run(C_toplevel);
-	
 	start_server(1111);
 	
     int retVal = UIApplicationMain(argc, argv, nil, nil);
