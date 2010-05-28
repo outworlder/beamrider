@@ -1,10 +1,10 @@
 (use tcp)
 (use srfi-18)
 
-(repl-prompt "[iPhone] #; ")
+;; (repl-prompt "[iPhone] #; ")
 
 (define (my-repl)
-  (display (repl-prompt))
+  (display "[iPhone] #; ")
   (let ([result (eval (read))])
     (print result)))
 
@@ -16,11 +16,11 @@
 (define (start-server #!key (port 1100))
   (print "Chicken server starting at port: " port)
   (print)
-  (let ([listener (tcp-listen port)])
-    (let accept ()
-      (if (tcp-accept-ready? listener)
-          (thread-start!
-           (lambda ()
+  (thread-start!
+   (lambda ()
+     (let ([listener (tcp-listen port)])
+       (let accept ()
+         (if (tcp-accept-ready? listener)
              (let-values ([(input-port output-port) (tcp-accept listener)])
                (with-output-to-port output-port
                  (lambda ()
@@ -45,5 +45,5 @@
                           ;; [exception (exn bounds) (my-exception-handler exception back-to-repl)]
                           ;; [exception (exn match) (my-exception-handler exception back-to-repl)]
                           ;; [exception (exn syntax) (my-exception-handler exception back-to-repl)]
-                          [exception (exn) (my-exception-handler exception back-to-repl)])))))))))
-          (accept)))))
+                          [exception (exn) (my-exception-handler exception back-to-repl)]))))))))
+         (accept))))))

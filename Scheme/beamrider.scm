@@ -25,12 +25,6 @@
 (define (point->list point)
   (list (point-x point) (point-y point) (point-z point)))
 
-(define grid
-  (make-grid 80 100))
-
-(define grid-length
-  (- (f32vector-length grid) 1))
-
 (define (make-line x1 y1 z1 x2 y2 z2)
   (list (make-point x1 y1 z1) (make-point x2 y2 z2)))
 
@@ -64,6 +58,7 @@
                              side/2                   ;y2
                              0))))))))                ;z2
 
+
 (define (setup-scene width height)
   (print "Width: " width)
   (print "Height: " height)
@@ -96,6 +91,10 @@
     (glRotatef -85.0 1.0 0.0 0.0)
     (glDrawArrays GL_LINES 0 grid-length))))
 
-(start-server)
+(define grid
+  (make-grid 80 100))
+
+(define grid-length
+  (- (f32vector-length grid) 1))
 
 (return-to-host)

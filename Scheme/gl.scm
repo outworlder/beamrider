@@ -1,7 +1,7 @@
 
-(declare (block)
-         (standard-bindings)
-         (extended-bindings))
+;; (declare (block)
+;;          (standard-bindings)
+;;          (extended-bindings))
 
 ;; (c-declare "#include \"stdlib.h\"")
 (c-declare "#include <OpenGLES/ES1/gl.h>")

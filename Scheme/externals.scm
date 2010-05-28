@@ -8,3 +8,5 @@
   (setup-scene width height))
 
 
+(define-external (start_server (int port)) void
+  (start-server port))

@@ -15,6 +15,8 @@ int main(int argc, char *argv[]) {
 	
     CHICKEN_run(C_toplevel);
 	
+	start_server(1111);
+	
     int retVal = UIApplicationMain(argc, argv, nil, nil);
     [pool release];
     return retVal;
