@@ -22,6 +22,7 @@
 	BOOL animating;
 	BOOL displayLinkSupported;
 	NSInteger animationFrameInterval;
+	double lastFrameTime;
 	// Use of the CADisplayLink class is the preferred method for controlling your animation timing.
 	// CADisplayLink will link to the main display and fire every vsync when added to a given run-loop.
 	// The NSTimer class is used only as fallback when running on a pre 3.1 device where CADisplayLink
@@ -32,10 +33,15 @@
 
 @property (readonly, nonatomic, getter=isAnimating) BOOL animating;
 @property (nonatomic) NSInteger animationFrameInterval;
+@property double lastFrameTime;
 
 - (void) startAnimation;
 - (void) stopAnimation;
 - (void) drawView:(id)sender;
 - (void) deviceOrientationChanged:(NSNotification *) notification;
+
+extern void set_orientation(int);
+extern void CHICKEN_yield();
+extern void update_world(float);
 
 @end

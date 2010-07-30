@@ -10,9 +10,6 @@
 
 @implementation ES1Renderer
 
-extern void render_scene();
-extern void scene_setup(int, int);
-
 // Create an ES 1.1 context
 - (id) init
 {
@@ -37,7 +34,7 @@ extern void scene_setup(int, int);
 		
 		CGRect rect = [[UIScreen mainScreen] applicationFrame];
 		scene_setup(rect.size.width, rect.size.height);
-		set_orientation((int) orientation);
+		//set_orientation((int) orientation);
 	}
 	
 	return self;

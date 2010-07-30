@@ -14,6 +14,7 @@
 @implementation EAGLView
 
 @synthesize animating;
+@synthesize lastFrameTime;
 @dynamic animationFrameInterval;
 
 // You must implement this method
@@ -77,10 +78,13 @@
 
 - (void) drawView:(id)sender
 {
-	// Lets try to give some time to the Chicken threads.
-	CHICKEN_yield();
+	double currentTime = CFAbsoluteTimeGetCurrent();
+
+	update_world((float)(currentTime - lastFrameTime));
 	
     [renderer render];
+	
+	lastFrameTime = currentTime;
 }
 
 - (void) layoutSubviews

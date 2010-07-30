@@ -27,4 +27,7 @@
 - (void) render;
 - (BOOL) resizeFromLayer:(CAEAGLLayer *)layer;
 
+extern void render_scene();
+extern void scene_setup(int, int);
+
 @end

@@ -10,6 +10,9 @@
 
 (define-record grid size divisions geometry number-vertexes)
 
+(define grid-offset 0)
+(define grid-speed 2)
+
 (define-syntax with-transform
   (syntax-rules ()
     ([_ body ...] (begin
@@ -80,13 +83,18 @@
   (glEnableClientState GL_VERTEX_ARRAY)
   (glDisableClientState GL_COLOR_ARRAY))
 
-(define (update-world deltat)
-  #f)
+(define (update-world! delta)
+  (print "Delta: " delta)
+  (if (>= grid-offset (/ (grid-size grid) 80))
+      (set! grid-offset 0)
+      (set! grid-offset (+ grid-offset (* delta grid-speed))))
+  #t)
 
 (define (set-device-orientation! direction)
   (let ([orientations (vector 'UNKNOWN 'UP 'DOWN 'LEFT 'RIGHT 'FACE-UP 'FACE-DOWN)]
         [angles '((UNKNOWN . 0) (UP . 0) (DOWN . 180) (LEFT . -90) (RIGHT . 90) (FACE-UP . 0) (FACE-DOWN . 0))])
     (glMatrixMode GL_MODELVIEW)
+    (glLoadIdentity)
     (print "Device orientation: " (symbol->string (car (assoc (vector-ref orientations direction) angles))))
     (glRotatef (cdr (assoc (vector-ref orientations direction) angles)) 0.0 0.0 1.0)))
 
@@ -96,6 +104,7 @@
    (glVertexPointer 3 GL_FLOAT 0 (grid-geometry grid))
    (with-transform
     (glColor4f 0.0 0.0 1.0 1.0)
+    (glTranslatef 0.0 0.0 grid-offset)
     (glTranslatef 0.0 -1.5 (- 9.5))
     (glRotatef -85.0 1.0 0.0 0.0)
     (glDrawArrays GL_LINES 0 (grid-number-vertexes grid)))))
@@ -106,7 +115,5 @@
 
 (define grid
   (generate-grid 80 100))
-
-(generate-grid 80 100)
 
 (return-to-host)
