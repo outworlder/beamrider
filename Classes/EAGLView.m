@@ -84,6 +84,8 @@
 	
     [renderer render];
 	
+	CHICKEN_yield();
+	
 	lastFrameTime = currentTime;
 }
 

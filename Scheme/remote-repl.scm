@@ -1,7 +1,10 @@
 (use tcp)
 (use srfi-18)
 
-;; (repl-prompt "[iPhone] #; ")
+(tcp-read-timeout #f)
+
+;; (define-external (start_server (int port)) void
+;;   (start-server port))
 
 (define (my-repl)
   (display "[iPhone] #; ")
@@ -38,12 +41,5 @@
                                       (tcp-close listener)
                                       (print "Connection closed.")
                                       (accept))]
-                          ;; [exception (exn runtime) (my-exception-handler exception back-to-repl)]
-                          ;; [exception (exn arity) (my-exception-handler exception back-to-repl)]
-                          ;; [exception (exn i/o) (my-exception-handler exception back-to-repl)]
-                          ;; [exception (exn arithmetic) (my-exception-handler exception back-to-repl)]
-                          ;; [exception (exn bounds) (my-exception-handler exception back-to-repl)]
-                          ;; [exception (exn match) (my-exception-handler exception back-to-repl)]
-                          ;; [exception (exn syntax) (my-exception-handler exception back-to-repl)]
                           [exception (exn) (my-exception-handler exception back-to-repl)]))))))))
          (accept))))))

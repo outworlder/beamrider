@@ -2,7 +2,6 @@
 (include "gl")
 (include "config")
 (include "externals")
-(include "remote-repl")
 
 (use srfi-4)
 
@@ -72,7 +71,7 @@
   (glViewport 0 0 width height)
   (glMatrixMode GL_PROJECTION)
   (glLoadIdentity)
-  (make-perspective field-of-view (/ width height) zNear zFar)  
+  (make-perspective field-of-view (/ width height) zNear zFar)
   (glMatrixMode GL_MODELVIEW)
   (glLoadIdentity)
   (glEnable GL_BLEND)

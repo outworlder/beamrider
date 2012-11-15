@@ -19,19 +19,20 @@
 		28FD14FE0DC6FC130079059D /* EAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FD14FD0DC6FC130079059D /* EAGLView.m */; };
 		28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
 		28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
-		EB0279C0118B95D30023C30C /* beamrider.c in Sources */ = {isa = PBXBuildFile; fileRef = EB0279BF118B95D30023C30C /* beamrider.c */; settings = {COMPILER_FLAGS = "-DC_EMBEDDED"; }; };
-		EB07D0991202264A001FADD6 /* data-structures.c in Sources */ = {isa = PBXBuildFile; fileRef = EB07D08E1202264A001FADD6 /* data-structures.c */; };
-		EB07D09A1202264A001FADD6 /* eval.c in Sources */ = {isa = PBXBuildFile; fileRef = EB07D08F1202264A001FADD6 /* eval.c */; };
-		EB07D09B1202264A001FADD6 /* extras.c in Sources */ = {isa = PBXBuildFile; fileRef = EB07D0901202264A001FADD6 /* extras.c */; };
-		EB07D09C1202264A001FADD6 /* library.c in Sources */ = {isa = PBXBuildFile; fileRef = EB07D0911202264A001FADD6 /* library.c */; };
-		EB07D09D1202264A001FADD6 /* ports.c in Sources */ = {isa = PBXBuildFile; fileRef = EB07D0921202264A001FADD6 /* ports.c */; };
-		EB07D09E1202264A001FADD6 /* runtime.c in Sources */ = {isa = PBXBuildFile; fileRef = EB07D0931202264A001FADD6 /* runtime.c */; };
-		EB07D09F1202264A001FADD6 /* scheduler.c in Sources */ = {isa = PBXBuildFile; fileRef = EB07D0941202264A001FADD6 /* scheduler.c */; };
-		EB07D0A01202264A001FADD6 /* srfi-1.c in Sources */ = {isa = PBXBuildFile; fileRef = EB07D0951202264A001FADD6 /* srfi-1.c */; };
-		EB07D0A11202264A001FADD6 /* srfi-4.c in Sources */ = {isa = PBXBuildFile; fileRef = EB07D0961202264A001FADD6 /* srfi-4.c */; };
-		EB07D0A21202264A001FADD6 /* tcp.c in Sources */ = {isa = PBXBuildFile; fileRef = EB07D0971202264A001FADD6 /* tcp.c */; };
-		EB07D0B8120228F2001FADD6 /* srfi-18.c in Sources */ = {isa = PBXBuildFile; fileRef = EB07D0B7120228F2001FADD6 /* srfi-18.c */; };
-		EB07D0BC12022916001FADD6 /* expand.c in Sources */ = {isa = PBXBuildFile; fileRef = EB07D0BB12022916001FADD6 /* expand.c */; };
+		DC89015416547FA70064EB9A /* data-structures.c in Sources */ = {isa = PBXBuildFile; fileRef = DC89014A16547FA70064EB9A /* data-structures.c */; };
+		DC89015516547FA70064EB9A /* eval.c in Sources */ = {isa = PBXBuildFile; fileRef = DC89014B16547FA70064EB9A /* eval.c */; };
+		DC89015616547FA70064EB9A /* expand.c in Sources */ = {isa = PBXBuildFile; fileRef = DC89014C16547FA70064EB9A /* expand.c */; };
+		DC89015716547FA70064EB9A /* extras.c in Sources */ = {isa = PBXBuildFile; fileRef = DC89014D16547FA70064EB9A /* extras.c */; };
+		DC89015816547FA70064EB9A /* library.c in Sources */ = {isa = PBXBuildFile; fileRef = DC89014E16547FA70064EB9A /* library.c */; };
+		DC89015916547FA70064EB9A /* ports.c in Sources */ = {isa = PBXBuildFile; fileRef = DC89014F16547FA70064EB9A /* ports.c */; };
+		DC89015A16547FA70064EB9A /* runtime.c in Sources */ = {isa = PBXBuildFile; fileRef = DC89015016547FA70064EB9A /* runtime.c */; };
+		DC89015B16547FA70064EB9A /* scheduler.c in Sources */ = {isa = PBXBuildFile; fileRef = DC89015116547FA70064EB9A /* scheduler.c */; };
+		DC89015C16547FA70064EB9A /* srfi-4.c in Sources */ = {isa = PBXBuildFile; fileRef = DC89015216547FA70064EB9A /* srfi-4.c */; };
+		DC89015D16547FA70064EB9A /* tcp.c in Sources */ = {isa = PBXBuildFile; fileRef = DC89015316547FA70064EB9A /* tcp.c */; };
+		DC890162165487260064EB9A /* build-version.c in Sources */ = {isa = PBXBuildFile; fileRef = DC89015F165487260064EB9A /* build-version.c */; };
+		DC890163165487260064EB9A /* modules.c in Sources */ = {isa = PBXBuildFile; fileRef = DC890160165487260064EB9A /* modules.c */; };
+		DC890164165487260064EB9A /* srfi-18.c in Sources */ = {isa = PBXBuildFile; fileRef = DC890161165487260064EB9A /* srfi-18.c */; };
+		DC89017B1654918A0064EB9A /* beamrider.c in Sources */ = {isa = PBXBuildFile; fileRef = DC89017A1654918A0064EB9A /* beamrider.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -67,21 +68,23 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* beamrider_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = beamrider_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* beamrider-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "beamrider-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		EB0279A1118B933C0023C30C /* libchicken.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libchicken.a; path = /Users/spedrosa/bin/chicken/iPhone.Simulator/lib/libchicken.a; sourceTree = "<absolute>"; };
-		EB0279BF118B95D30023C30C /* beamrider.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = beamrider.c; sourceTree = SOURCE_ROOT; };
-		EB07D08D1202264A001FADD6 /* chicken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = chicken.h; path = "../../chicken-core/chicken.h"; sourceTree = SOURCE_ROOT; };
-		EB07D08E1202264A001FADD6 /* data-structures.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "data-structures.c"; path = "../../chicken-core/data-structures.c"; sourceTree = SOURCE_ROOT; };
-		EB07D08F1202264A001FADD6 /* eval.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = eval.c; path = "../../chicken-core/eval.c"; sourceTree = SOURCE_ROOT; };
-		EB07D0901202264A001FADD6 /* extras.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = extras.c; path = "../../chicken-core/extras.c"; sourceTree = SOURCE_ROOT; };
-		EB07D0911202264A001FADD6 /* library.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = library.c; path = "../../chicken-core/library.c"; sourceTree = SOURCE_ROOT; };
-		EB07D0921202264A001FADD6 /* ports.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ports.c; path = "../../chicken-core/ports.c"; sourceTree = SOURCE_ROOT; };
-		EB07D0931202264A001FADD6 /* runtime.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = runtime.c; path = "../../chicken-core/runtime.c"; sourceTree = SOURCE_ROOT; };
-		EB07D0941202264A001FADD6 /* scheduler.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = scheduler.c; path = "../../chicken-core/scheduler.c"; sourceTree = SOURCE_ROOT; };
-		EB07D0951202264A001FADD6 /* srfi-1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "srfi-1.c"; path = "../../chicken-core/srfi-1.c"; sourceTree = SOURCE_ROOT; };
-		EB07D0961202264A001FADD6 /* srfi-4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "srfi-4.c"; path = "../../chicken-core/srfi-4.c"; sourceTree = SOURCE_ROOT; };
-		EB07D0971202264A001FADD6 /* tcp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = tcp.c; path = "../../chicken-core/tcp.c"; sourceTree = SOURCE_ROOT; };
-		EB07D0B7120228F2001FADD6 /* srfi-18.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "srfi-18.c"; path = "../../chicken-core/srfi-18.c"; sourceTree = SOURCE_ROOT; };
-		EB07D0BB12022916001FADD6 /* expand.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = expand.c; path = "../../chicken-core/expand.c"; sourceTree = SOURCE_ROOT; };
+		DC89014916547FA70064EB9A /* chicken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = chicken.h; path = Chicken/chicken.h; sourceTree = "<group>"; };
+		DC89014A16547FA70064EB9A /* data-structures.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "data-structures.c"; path = "Chicken/data-structures.c"; sourceTree = "<group>"; };
+		DC89014B16547FA70064EB9A /* eval.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = eval.c; path = Chicken/eval.c; sourceTree = "<group>"; };
+		DC89014C16547FA70064EB9A /* expand.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = expand.c; path = Chicken/expand.c; sourceTree = "<group>"; };
+		DC89014D16547FA70064EB9A /* extras.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = extras.c; path = Chicken/extras.c; sourceTree = "<group>"; };
+		DC89014E16547FA70064EB9A /* library.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = library.c; path = Chicken/library.c; sourceTree = "<group>"; };
+		DC89014F16547FA70064EB9A /* ports.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ports.c; path = Chicken/ports.c; sourceTree = "<group>"; };
+		DC89015016547FA70064EB9A /* runtime.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = runtime.c; path = Chicken/runtime.c; sourceTree = "<group>"; };
+		DC89015116547FA70064EB9A /* scheduler.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = scheduler.c; path = Chicken/scheduler.c; sourceTree = "<group>"; };
+		DC89015216547FA70064EB9A /* srfi-4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "srfi-4.c"; path = "Chicken/srfi-4.c"; sourceTree = "<group>"; };
+		DC89015316547FA70064EB9A /* tcp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = tcp.c; path = Chicken/tcp.c; sourceTree = "<group>"; };
+		DC89015E165483190064EB9A /* chicken-config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "chicken-config.h"; path = "Chicken/chicken-config.h"; sourceTree = "<group>"; };
+		DC89015F165487260064EB9A /* build-version.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "build-version.c"; path = "Chicken/build-version.c"; sourceTree = "<group>"; };
+		DC890160165487260064EB9A /* modules.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = modules.c; path = Chicken/modules.c; sourceTree = "<group>"; };
+		DC890161165487260064EB9A /* srfi-18.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "srfi-18.c"; path = "Chicken/srfi-18.c"; sourceTree = "<group>"; };
+		DC890165165487350064EB9A /* buildtag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = buildtag.h; path = Chicken/buildtag.h; sourceTree = "<group>"; };
+		DC89017A1654918A0064EB9A /* beamrider.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = beamrider.c; path = Scheme/beamrider.c; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +105,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				EB0279BF118B95D30023C30C /* beamrider.c */,
+				DC89017A1654918A0064EB9A /* beamrider.c */,
 				2514C26D10084DB100A42282 /* ES1Renderer.h */,
 				2514C26E10084DB100A42282 /* ES1Renderer.m */,
 				2514C26F10084DB100A42282 /* ES2Renderer.h */,
@@ -143,7 +146,6 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				EB0279A1118B933C0023C30C /* libchicken.a */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -180,19 +182,22 @@
 		EB07D08C120225BD001FADD6 /* Chicken */ = {
 			isa = PBXGroup;
 			children = (
-				EB07D0BB12022916001FADD6 /* expand.c */,
-				EB07D0B7120228F2001FADD6 /* srfi-18.c */,
-				EB07D08D1202264A001FADD6 /* chicken.h */,
-				EB07D08E1202264A001FADD6 /* data-structures.c */,
-				EB07D08F1202264A001FADD6 /* eval.c */,
-				EB07D0901202264A001FADD6 /* extras.c */,
-				EB07D0911202264A001FADD6 /* library.c */,
-				EB07D0921202264A001FADD6 /* ports.c */,
-				EB07D0931202264A001FADD6 /* runtime.c */,
-				EB07D0941202264A001FADD6 /* scheduler.c */,
-				EB07D0951202264A001FADD6 /* srfi-1.c */,
-				EB07D0961202264A001FADD6 /* srfi-4.c */,
-				EB07D0971202264A001FADD6 /* tcp.c */,
+				DC890165165487350064EB9A /* buildtag.h */,
+				DC89015F165487260064EB9A /* build-version.c */,
+				DC890160165487260064EB9A /* modules.c */,
+				DC890161165487260064EB9A /* srfi-18.c */,
+				DC89015E165483190064EB9A /* chicken-config.h */,
+				DC89014916547FA70064EB9A /* chicken.h */,
+				DC89014A16547FA70064EB9A /* data-structures.c */,
+				DC89014B16547FA70064EB9A /* eval.c */,
+				DC89014C16547FA70064EB9A /* expand.c */,
+				DC89014D16547FA70064EB9A /* extras.c */,
+				DC89014E16547FA70064EB9A /* library.c */,
+				DC89014F16547FA70064EB9A /* ports.c */,
+				DC89015016547FA70064EB9A /* runtime.c */,
+				DC89015116547FA70064EB9A /* scheduler.c */,
+				DC89015216547FA70064EB9A /* srfi-4.c */,
+				DC89015316547FA70064EB9A /* tcp.c */,
 			);
 			name = Chicken;
 			sourceTree = "<group>";
@@ -228,7 +233,14 @@
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "beamrider" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -261,19 +273,20 @@
 				28FD14FE0DC6FC130079059D /* EAGLView.m in Sources */,
 				2514C27210084DB100A42282 /* ES1Renderer.m in Sources */,
 				2514C27310084DB100A42282 /* ES2Renderer.m in Sources */,
-				EB0279C0118B95D30023C30C /* beamrider.c in Sources */,
-				EB07D0991202264A001FADD6 /* data-structures.c in Sources */,
-				EB07D09A1202264A001FADD6 /* eval.c in Sources */,
-				EB07D09B1202264A001FADD6 /* extras.c in Sources */,
-				EB07D09C1202264A001FADD6 /* library.c in Sources */,
-				EB07D09D1202264A001FADD6 /* ports.c in Sources */,
-				EB07D09E1202264A001FADD6 /* runtime.c in Sources */,
-				EB07D09F1202264A001FADD6 /* scheduler.c in Sources */,
-				EB07D0A01202264A001FADD6 /* srfi-1.c in Sources */,
-				EB07D0A11202264A001FADD6 /* srfi-4.c in Sources */,
-				EB07D0A21202264A001FADD6 /* tcp.c in Sources */,
-				EB07D0B8120228F2001FADD6 /* srfi-18.c in Sources */,
-				EB07D0BC12022916001FADD6 /* expand.c in Sources */,
+				DC89015416547FA70064EB9A /* data-structures.c in Sources */,
+				DC89015516547FA70064EB9A /* eval.c in Sources */,
+				DC89015616547FA70064EB9A /* expand.c in Sources */,
+				DC89015716547FA70064EB9A /* extras.c in Sources */,
+				DC89015816547FA70064EB9A /* library.c in Sources */,
+				DC89015916547FA70064EB9A /* ports.c in Sources */,
+				DC89015A16547FA70064EB9A /* runtime.c in Sources */,
+				DC89015B16547FA70064EB9A /* scheduler.c in Sources */,
+				DC89015C16547FA70064EB9A /* srfi-4.c in Sources */,
+				DC89015D16547FA70064EB9A /* tcp.c in Sources */,
+				DC890162165487260064EB9A /* build-version.c in Sources */,
+				DC890163165487260064EB9A /* modules.c in Sources */,
+				DC890164165487260064EB9A /* srfi-18.c in Sources */,
+				DC89017B1654918A0064EB9A /* beamrider.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,37 +296,60 @@
 		1D6058940D05DD3E006BFB54 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tiago Bastos da Silva (HL4267W8QH)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tiago Bastos da Silva (HL4267W8QH)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = beamrider_Prefix.pch;
-				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
-				INFOPLIST_FILE = "beamrider-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../../../bin/chicken/iPhone.Simulator/lib\"",
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					DEBUG,
+					HAVE_CONFIG_H,
+					C_EMBEDDED,
 				);
+				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				GCC_VERSION = "";
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "beamrider-Info.plist";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = beamrider;
+				PROVISIONING_PROFILE = "1EDF1506-C191-4F63-8F74-F3FE7CB5F987";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "1EDF1506-C191-4F63-8F74-F3FE7CB5F987";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = Chicken/;
 			};
 			name = Debug;
 		};
 		1D6058950D05DD3E006BFB54 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tiago Bastos da Silva (HL4267W8QH)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tiago Bastos da Silva (HL4267W8QH)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = beamrider_Prefix.pch;
-				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
-				INFOPLIST_FILE = "beamrider-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../../../bin/chicken/iPhone.Simulator/lib\"",
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					HAVE_CONFIG_H,
+					C_EMBEDDED,
 				);
+				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				GCC_VERSION = "";
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "beamrider-Info.plist";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = beamrider;
+				PROVISIONING_PROFILE = "1EDF1506-C191-4F63-8F74-F3FE7CB5F987";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "1EDF1506-C191-4F63-8F74-F3FE7CB5F987";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = Chicken/;
 			};
 			name = Release;
 		};
@@ -324,10 +360,11 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Stephen Eilert";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				LIBRARY_SEARCH_PATHS = "";
 				MACH_O_TYPE = mh_execute;
 				OTHER_LDFLAGS = "";
@@ -345,6 +382,7 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				PREBINDING = NO;
 				SDKROOT = iphoneos3.1.2;
 			};

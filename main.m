@@ -15,9 +15,16 @@ int main(int argc, char *argv[]) {
     
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 	
-    CHICKEN_run(C_toplevel);
-	start_server(1111);
-	
+    int chicken_startup = CHICKEN_initialize(0, 0, 0, C_toplevel);
+    
+    if (!chicken_startup) {
+        NSLog(@"Unable to initialize Chicken Scheme. Aborting");
+        exit(-1);
+    } else {
+        CHICKEN_run(NULL);
+        //start_server(1111);
+    }
+    
     int retVal = UIApplicationMain(argc, argv, nil, nil);
     [pool release];
     return retVal;
